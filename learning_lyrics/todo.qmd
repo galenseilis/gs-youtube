@@ -1,0 +1,3 @@
+- Classify the types of sentences (questions, statements, etc)
+- Provide an interpretation of each sentence
+- Learn the story behind the song (background context)
