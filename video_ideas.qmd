@@ -1,0 +1,10 @@
+
+# Example of Accessing Google's Data API Via Python
+
+https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart?account_type=user#python_1
+https://pypi.org/project/google-analytics-data/
+https://pypi.org/project/googleanalytics/
+
+# Adding Doctest to An Existing Project
+
+https://realpython.com/python-doctest/
