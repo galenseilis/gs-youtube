@@ -12,3 +12,4 @@ https://realpython.com/python-doctest/
 # Ciw Examples
 
 - Design a subclass of `ciw.Schedule` which randomly follows no-preemption, resampling, restarting, resuming, and rerouting for the `preemption` parameter.
+  - https://ciw.readthedocs.io/en/latest/Guides/Services/preemption.html
