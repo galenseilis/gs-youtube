@@ -8,3 +8,7 @@ https://pypi.org/project/googleanalytics/
 # Adding Doctest to An Existing Project
 
 https://realpython.com/python-doctest/
+
+# Ciw Examples
+
+- Design a subclass of `ciw.Schedule` which randomly follows no-preemption, resampling, restarting, resuming, and rerouting for the `preemption` parameter.
