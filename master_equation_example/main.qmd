@@ -1,0 +1,14 @@
+---
+title: A Brief Introduction to Master Equations
+author: Galen Seilis
+---
+
+# What?
+
+# Why Use Master Equations?
+
+# What are applications of Master Equations?
+
+# Basic Form
+
+$$\frac{d \vec p}{dt} = A_{n \times n} \vec p$$
