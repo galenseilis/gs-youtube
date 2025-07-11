@@ -10,6 +10,7 @@ network = ciw.create_network(
     number_of_servers=[3],
 )
 
+
 def get_mean_wait(network, seed=0, max_time=1000):
     ciw.seed(seed)
     sim = ciw.Simulation(network)
@@ -19,12 +20,9 @@ def get_mean_wait(network, seed=0, max_time=1000):
     avg_wait = sum(waits) / len(waits)
     return avg_wait
 
+
 if __name__ == "__main__":
     pool = multiprocessing.Pool(processes=10)
-    args = [
-        (network, seed, MAX_TIME)
-        for seed in
-        range(NUM_TRIALS)
-    ]
+    args = [(network, seed, MAX_TIME) for seed in range(NUM_TRIALS)]
     waits = pool.starmap(get_mean_wait, args)
     print(sum(waits) / NUM_TRIALS)

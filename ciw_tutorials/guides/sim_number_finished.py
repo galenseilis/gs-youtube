@@ -9,6 +9,6 @@ network = ciw.create_network(
 
 ciw.seed(1)
 sim = ciw.Simulation(network)
-sim.simulate_until_max_customers(30, method='Finish')
+sim.simulate_until_max_customers(30, method="Finish")
 records = sim.get_all_records()
 print(len(records))

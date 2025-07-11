@@ -9,10 +9,10 @@ network = ciw.create_network(
 
 ciw.seed(1)
 sim = ciw.Simulation(network)
-sim.simulate_until_max_customers(30, method='Arrive')
+sim.simulate_until_max_customers(30, method="Arrive")
 records = sim.get_all_records()
 print(
-    len([r for r in records if r.record_type=="service"]),
+    len([r for r in records if r.record_type == "service"]),
     len(sim.nodes[1].all_individuals),
-    len([r for r in records if r.record_type=="rejection"]),
+    len([r for r in records if r.record_type == "rejection"]),
 )

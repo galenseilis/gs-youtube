@@ -10,4 +10,3 @@ network = ciw.create_network(
 sim = ciw.Simulation(network)
 
 sim.simulate_until_max_time(max_simulation_time=10_000, progress_bar=True)
-

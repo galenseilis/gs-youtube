@@ -15,4 +15,3 @@ sim.simulate_until_max_time(2)
 records = sim.get_all_records()
 
 print(records)
-

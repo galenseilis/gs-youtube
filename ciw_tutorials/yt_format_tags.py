@@ -1,4 +1,4 @@
-with open('tag.txt', 'r') as f:
-    tags = ''.join(f.readlines())
+with open("tag.txt", "r") as f:
+    tags = "".join(f.readlines())
 
-print(tags.replace('\n', ',')[:-2])
+print(tags.replace("\n", ",")[:-2])

@@ -2,39 +2,39 @@ import ciw
 
 network = ciw.create_network(
     arrival_distributions={
-        'Baby': [
+        "Baby": [
             ciw.dists.Exponential(rate=1.0),
             None,
             None,
         ],
-        'Child': [
+        "Child": [
             ciw.dists.Exponential(rate=2.0),
             None,
             None,
         ],
     },
     service_distributions={
-        'Baby': [
+        "Baby": [
             ciw.dists.Exponential(rate=4.0),
             ciw.dists.Exponential(1.0),
-            ciw.dists.Deterministic(value=0.0), # WARN: Not used.
+            ciw.dists.Deterministic(value=0.0),  # WARN: Not used.
         ],
-        'Child': [
+        "Child": [
             ciw.dists.Exponential(rate=6.0),
             ciw.dists.Deterministic(value=0.0),
             ciw.dists.Exponential(rate=1.0),
         ],
     },
     routing={
-        'Baby': [
-                [0.0, 1.0, 0.0],
-                [0.0] * 3,
-                [0.0] * 3,
-                 ],
-        'Child': [
-                    [0.0, 0.0, 1.0],
-                    [0.0] * 3,
-                    [0.0, 0.0, 0.0],
+        "Baby": [
+            [0.0, 1.0, 0.0],
+            [0.0] * 3,
+            [0.0] * 3,
+        ],
+        "Child": [
+            [0.0, 0.0, 1.0],
+            [0.0] * 3,
+            [0.0, 0.0, 0.0],
         ],
     },
     number_of_servers=[1, 2, 3],
@@ -54,32 +54,28 @@ for trial in range(NUM_TRIALS):
     waits1_babies = [
         r.waiting_time
         for r in recs
-        if r.node==1 and 
-        r.arrival_date > 3 and 
-        r.arrival_date < 27 and 
-        r.customer_class == 'Baby'
+        if r.node == 1
+        and r.arrival_date > 3
+        and r.arrival_date < 27
+        and r.customer_class == "Baby"
     ]
     waits1_children = [
         r.waiting_time
-        for r in recs 
-        if r.node==1 and 
-        r.arrival_date > 3 and 
-        r.arrival_date < 27 and 
-        r.customer_class == 'Child'
+        for r in recs
+        if r.node == 1
+        and r.arrival_date > 3
+        and r.arrival_date < 27
+        and r.customer_class == "Child"
     ]
     waits2 = [
         r.waiting_time
         for r in recs
-        if r.node==2 and 
-        r.arrival_date > 3 and 
-        r.arrival_date < 27
+        if r.node == 2 and r.arrival_date > 3 and r.arrival_date < 27
     ]
     waits3 = [
-        r.waiting_time 
-        for r in recs 
-        if r.node==3 and 
-        r.arrival_date > 3 
-        and r.arrival_date < 27
+        r.waiting_time
+        for r in recs
+        if r.node == 3 and r.arrival_date > 3 and r.arrival_date < 27
     ]
     average_waits_1_babies.append(sum(waits1_babies) / len(waits1_babies))
     average_waits_1_children.append(sum(waits1_children) / len(waits1_children))
@@ -96,22 +92,3 @@ print(sum(average_waits_1_babies) / len(average_waits_1_babies))
 print(sum(average_waits_1_children) / len(average_waits_1_children))
 print(sum(average_waits_2) / len(average_waits_2))
 print(sum(average_waits_3) / len(average_waits_3))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -10,8 +10,4 @@ network = ciw.create_network(
 NUM_CUSTOMERS = 30
 ciw.seed(1)
 sim = ciw.Simulation(network)
-sim.simulate_until_max_customers(
-    max_customers=NUM_CUSTOMERS,
-    method='Finish'
-)
-
+sim.simulate_until_max_customers(max_customers=NUM_CUSTOMERS, method="Finish")

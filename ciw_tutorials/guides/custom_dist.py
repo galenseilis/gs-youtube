@@ -1,17 +1,20 @@
 import ciw
 import random
 
+
 class CustomDistribution(ciw.dists.Distribution):
     def sample(self, t=None, ind=None):
         if random.random() < 0.5:
             return 3.0
         return random.random()
 
+
 class AnotherCustomDistribution(ciw.dists.Distribution):
     def sample(self, t=None, ind=None):
         if random.random() < 0.7:
             return 3.0
         return random.random() * 100
+
 
 network = ciw.create_network(
     arrival_distributions=[AnotherCustomDistribution()],

@@ -14,5 +14,3 @@ for trial in tqdm(range(NUM_TRIALS)):
     sim = ciw.Simulation(network)
     sim.simulate_until_max_customers(100)
     records = sim.get_all_records()
-
-

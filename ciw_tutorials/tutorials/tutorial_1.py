@@ -20,8 +20,8 @@ for trial_seed in range(10):
     waits = [
         record.waiting_time
         for record in records
-        if record.arrival_date > WARMUP_TIME and
-        record.arrival_date < SIMULATION_TIME - COOLDOWN_TIME
+        if record.arrival_date > WARMUP_TIME
+        and record.arrival_date < SIMULATION_TIME - COOLDOWN_TIME
     ]
     mean_wait = np.mean(waits)
     average_waits.append(mean_wait)
