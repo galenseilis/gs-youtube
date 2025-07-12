@@ -1,11 +1,9 @@
 import ciw
 
-
 class StateDependentDist(ciw.dists.Distribution):
     def sample(self, t=None, ind=None):
         n = ind.simulation.statetracker.state
         return max((-0.05 * n) + 0.2, 0)
-
 
 network = ciw.create_network(
     arrival_distributions=[ciw.dists.Exponential(rate=4)],
