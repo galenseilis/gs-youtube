@@ -1,4 +1,4 @@
-📙 Documentation: https://ciw.readthedocs.io/en/latest/Guides/Distributions/time_dependent.html#the-problem-of-sampling-arrivals-across-thresholds
+📙 Documentation: 
 💬 Reddit: https://www.reddit.com/r/CiwPython/
 🧑‍💻 GitHub: https://github.com/CiwPython/Ciw
 🐦X: https://x.com/CiwPython
@@ -11,3 +11,4 @@ Me: 👋
 📓 Blog: https://galenseilis.github.io/blog/
 👁️‍🗨️ : https://www.reddit.com/user/galenseilis/
 🐦 X: https://x.com/GSeilis
+📷 Instagram: https://www.instagram.com/galenseilis/
