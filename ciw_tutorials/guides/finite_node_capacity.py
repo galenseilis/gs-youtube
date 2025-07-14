@@ -1,20 +1,20 @@
 import ciw
 
-# Define a simple 2-node network
 N = ciw.create_network(
-    arrival_distributions=[
-        [ciw.dists.Exponential(1.0)],  # Arrivals at Node 1
-        [None]                         # No external arrivals at Node 2
-    ],
-    service_distributions=[
-        [ciw.dists.Exponential(2.0)],  # Service at Node 1
-        [ciw.dists.Exponential(2.0)]   # Service at Node 2
-    ],
-    routing=[[0.0, 1.0], [0.0, 0.0]],  # Routing: Node 1 -> Node 2
-    number_of_servers=[1, 1],
-    queue_capacities=[2, 1]  # Node 1 has capacity 2, Node 2 has capacity 1
+    arrival_distributions=[ciw.dists.Exponential(rate=2),
+                           ciw.dists.Exponential(rate=1)],
+    service_distributions=[ciw.dists.Exponential(rate=1),
+                           ciw.dists.Exponential(rate=1)],
+    routing=[[0.0, 0.5],
+             [0.0, 0.0]],
+    number_of_servers=[3, 2],
+    queue_capacities=[float('inf'), 10]
 )
 
-recs = Q.get_all_records(only=['rejection'])
-dr = recs[0]
-dr
+if __name__ == "__main__":
+    ciw.seed(0)
+    Q = ciw.Simulation(N)
+    Q.simulate_until_max_time(100)
+    recs = Q.get_all_records(only='service')
+    dr = recs[381]
+    print(dr)
