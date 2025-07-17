@@ -1,0 +1,1 @@
+/home/galen/projects/gs-youtube/reading_the_rust_book/01_getting_started/1_2_hello_world/hello_cargo/target/release/hello_cargo: /home/galen/projects/gs-youtube/reading_the_rust_book/01_getting_started/1_2_hello_world/hello_cargo/src/main.rs
